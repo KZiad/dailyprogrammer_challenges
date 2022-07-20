@@ -2,6 +2,8 @@
 //
 
 #include <iostream>
+#include <sstream>
+
 using namespace std;
 int lettersum(string);
 int main()
@@ -9,12 +11,13 @@ int main()
 	while (1) {
 		string s;
 		cout << "s: ";
-		cin >> s;
+		getline(cin, s);
 		cout << lettersum(s) << endl;
 	}
 	
 }
 int lettersum(string s) {
+
 	int sum = 0;
 	for (char l : s) {
 		sum += (l - 'a' + 1);
